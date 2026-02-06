@@ -13,15 +13,14 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
 app.use('/api/users', userRoutes);
 app.use('/api/listings', require('./routes/listingRoutes'));
 app.use('/api/orders', orderRoutes);
 app.use('/api/categories', categoryRoutes);
 
-// app.get('/', (req, res) => {
-//     res.send('BabbaFly Backend is Running!');
-// });
+app.get('/', (req, res) => {
+    res.send('BabbaFly Backend is Running!');
+});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
