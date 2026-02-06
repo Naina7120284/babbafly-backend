@@ -19,9 +19,9 @@ app.use('/api/listings', require('./routes/listingRoutes'));
 app.use('/api/orders', orderRoutes);
 app.use('/api/categories', categoryRoutes);
 
-app.get('/', (req, res) => {
-    res.send('BabbaFly Backend is Running!');
-});
+// app.get('/', (req, res) => {
+//     res.send('BabbaFly Backend is Running!');
+// });
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
