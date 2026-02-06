@@ -5,7 +5,6 @@ const generateToken = (id) => {
         expiresIn: '30d',
     });
 };
-
 exports.registerUser = async (req, res) => {
     const { name, email, phone, password } = req.body;
 
