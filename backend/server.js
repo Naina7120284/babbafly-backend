@@ -13,6 +13,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'));
 app.use('/api/users', userRoutes);
 app.use('/api/listings', require('./routes/listingRoutes'));
 app.use('/api/orders', orderRoutes);
